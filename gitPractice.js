@@ -1,1 +1,2 @@
-day 3 git lesson
+day 3 git class
+trial and exercise
