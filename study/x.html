@@ -1,0 +1,43 @@
+  
+<body>
+    <h3>Event Propagation</h3>
+    <p>
+        The propagation is bidirectional, from the window to the event target and back. This propagation can be divided
+        into three phases:
+        <ul>
+            <li>From the window to the event target parent: this is the capture phase</li>
+            <li>The event target itself: this is the target phase</li>
+            <li>From the event target parent back to the window: the bubble phase</li>
+        </ul>
+    </p>
+    <p>The event propagation can be stopped in any listener by invoking the stopPropagation method of the event object.
+        This means that all the listeners registered on the nodes on the propagation path that follow the current target
+        will not be called. Instead, all the other remaining listeners attached on the current target will still receive
+        the event.</p>
+    <p><img src="https://www.w3.org/TR/DOM-Level-3-Events/images/eventflow.svg" width="500"></p>
+    <p><a href="http://www.w3.org/Consortium/Legal/2015/doc-license">Copyright © 2016 World Wide Web Consortium</a></p>
+    <ul>
+        <li>
+            <a href="https://www.google.com">
+                <span>Click me</span>
+            </a>
+        </li>
+    </ul>
+    <button class="button1">button 1</button> 
+    <button class="button2">button 2</button>
+    <button class="back">back</button>
+
+
+</body>
+<script>
+   navigator.geolocation.getCurrentPosition(success, fail);
+   function success(position){
+    console.log(position);
+    console.log("longitude: "+ position.coords.longitude);
+    console.log("latitude: "+ position.coords.latitude);
+    
+   }
+   function fail(msg){
+       console.log("cant find it ");
+   }
+</script>
